@@ -5,7 +5,7 @@
 sudo pacman -Syu
 
 # CLI tools
-sudo pacman -S --noconfirm --needed base-devel zsh noto-fonts noto-fonts-cjk alacritty python python-pynvim python-pip htop feh nodejs npm
+sudo pacman -S --noconfirm --needed base-devel zsh zsh-syntax-highlighting noto-fonts noto-fonts-cjk alacritty python python-pynvim python-pip htop feh nodejs npm
 
 # GUI tools
 sudo pacman -S --noconfirm --needed nvidia xorg-xinit xmonad xmonad-contrib xmobar firefox rofi
@@ -74,8 +74,8 @@ ln -s ~/Documents/Github/dotfiles/xmobarrc ~/.config/xmobar/xmobarrc
 
 # kmonad
 sudo groupadd uinput
-sudo usermod -aG input psichen
-sudo usermod -aG uinput psichen
+sudo usermod -aG input $USER
+sudo usermod -aG uinput $USER
 echo 'KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"' > /etc/udev/rules.d/50-kmonad.rules
 
 # xinit
