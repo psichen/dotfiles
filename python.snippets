@@ -1,0 +1,48 @@
+snippet spt "import sp_toolbox" b
+import sys
+sys.path.append('/Users/psichen/Library/CloudStorage/OneDrive-med.cornell.edu/sp_toolbox')
+import sp_toolbox as spt$0
+endsnippet
+
+snippet ifit "interactive fit" b
+spt.interactive_fit($0)
+endsnippet
+
+snippet mpl "import matplotlib" b
+from matplotlib import pyplot as plt$0
+endsnippet
+
+snippet nmp "import numpy" b
+import numpy as np$0
+endsnippet
+
+snippet pds "import pandas" b
+import pandas as pd
+endsnippet
+
+snippet imshow "plt.imshow()" b
+plt.imshow($0, interpolation=None, cmap='gray')
+plt.show()
+endsnippet
+
+snippet sfig "plt.savefig()" b
+plt.savefig($0, transparent=True)
+endsnippet
+
+snippet plt "plt.show()" b
+plt.show()$0
+endsnippet
+
+snippet napari "napari snippet" b
+import napari
+viewer = napari.Viewer()
+viewer.add_$0
+napari.run()
+endsnippet
+
+snippet com "comment warp" b
+# $0
+#----------------------------------------
+${VISUAL}
+#========================================
+endsnippet

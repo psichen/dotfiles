@@ -1,0 +1,44 @@
+{
+ :devices {
+          :apple [{:vendor_id 1452 :product_id 834}]
+          }
+ :layers {
+          :numpad-mode {:key :spacebar}
+          }
+ :main [
+        {:des "caps lock to ctrl in internal keyboard" :rules [
+                                                               [:condi :apple] [:##caps_lock :##left_control]]}
+        {:des "cmd+esc to cmd+`" :rules [[:!Cescape :!Cgrave_accent_and_tilde]]}
+        {:des "spacebar+wasd to arrow keys" :rules [
+                                                    :numpad-mode
+                                                    [:w :up_arrow]
+                                                    [:a :left_arrow]
+                                                    [:s :down_arrow]
+                                                    [:d :right_arrow]]}
+        {:des "cmd+v to paste with formatting" :rules [[:!Qv :!COSv]]}
+        {:des "launch by right_cmd+letter" :rules [
+                                                   [:!Qe "open ~"]
+                                                   [:!Qa "open '/Applications/Alacritty.app'"]
+                                                   [:!Qf "open '/Applications/Firefox.app'"]
+                                                   [:!Qg "open '/Applications/Google Chrome.app'"]
+                                                   [:!Qi "open '/Applications/ImageJ.app'"]
+                                                   ]}
+        {:des "numpad" :rules [
+                               :numpad-mode
+                               [:#Sn :0]
+                               [:#Sm :1]
+                               [:#Scomma :2]
+                               [:#Speriod :3]
+                               [:#Sj :4]
+                               [:#Sk :5]
+                               [:#Sl :6]
+                               [:#Su :7]
+                               [:#Si :8]
+                               [:#So :9]
+                               [:#Sp :open_bracket]
+                               [:#Sopen_bracket :close_bracket]
+                               [:#Ssemicolon :hyphen]
+                               [:#Squote :equal_sign]
+                               [:#Sslash :backslash]
+                               ]}
+        ]}
