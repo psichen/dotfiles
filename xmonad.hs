@@ -31,7 +31,8 @@ myBar = "xmobar"
 
 ------------------------------------------------------------------------
 -- Workspaces
-myWorkspaces = ["1:main","2:wall","3:misc"] ++ map show [4..9]
+--myWorkspaces = ["1:main","2:wall","3:misc"] ++ map show [4..9]
+myWorkspaces = ["1:壹","2:贰","3:叁","4:肆","5:伍","6:陆","7:柒","8:捌","9:玖"]
 
 ------------------------------------------------------------------------
 -- Window rules
@@ -59,7 +60,6 @@ xmobarTitleColor = "#FFB6B0"
 xmobarCurrentWorkspaceColor = "#CEFFAC"
 -- Width of the window border in pixels.
 myBorderWidth = 3
-
 
 ------------------------------------------------------------------------
 -- StatusBar
