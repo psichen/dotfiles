@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'doums/darcula'
+Plug 'dracula/vim'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'easymotion/vim-easymotion'
 Plug 'mg979/vim-visual-multi'
@@ -29,7 +29,7 @@ call plug#end()
 " :PlugClean
 
 " User custom
-colorscheme darcula
+colorscheme dracula
 set termguicolors
 let mapleader = " "
 set nu rnu
@@ -99,7 +99,7 @@ nmap <Leader>p :InstantMarkdownPreview<CR>
 " lightline
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'darculaOriginal',
+      \ 'colorscheme': 'dracula',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'readonly', 'filename', 'modified', 'method' ] ]
