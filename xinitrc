@@ -55,11 +55,11 @@ fi
 # exec xterm -geometry 80x66+0+0 -name login
 if [ -d ~/Pictures/Wallpapers ]
 then
-        if [ -e ~/Pictures/Wallpapers/* ]
+        if [ -z "$(ls -A ~/Pictures/Wallpapers/)" ]
         then
-                feh --bg-fill --randomize ~/Pictures/Wallpapers/*
-        else
                 feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
+        else
+                feh --bg-fill --randomize ~/Pictures/Wallpapers/*
         fi
 else
         feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
