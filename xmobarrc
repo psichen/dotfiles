@@ -10,25 +10,19 @@ Config { font            = "Noto fonts Mono Bold 12"
        , persistent   = True
        , commands = [
                         -- Cpu usage in percent
-                      Run MultiCpu ["-t","cpu: <total>%","-H","50","--high","red"] 20
-                        -- Cpu temperature
-                      Run MultiCoreTemp ["-t", "<max>°C","-L","40","-H","60","-l","lightgreen","-h","red"] 20
+                      Run Cpu ["-t", "cpu: (<total>%)","-H","50","--high","red"] 20
                         -- Ram used number and percent
-                    , Run Memory ["-t", "mem: <used>G (<usedratio>%)","--","--scale","1024"] 20
+                    , Run Memory ["-t", "mem: <used>M (<usedratio>%)"] 20
                         -- Disk space free
                     , Run DiskU [("/", "ssd: <free> free")] [] 60
-                        -- Network
-                    , Run DynNetwork ["-t","net: <tx>|<rx>","-H","500000","-h","red","-S","True"] 60
                         -- Uptime
                     , Run Uptime ["-t", "uptime: <days>d <hours>h"] 360
                         -- Time and date
-                    , Run Date "%a %b %d %Y - %H:%M " "date" 50
-                        -- Weather
-                    , Run Weather "KNYC" ["-t","<skyCondition> <tempC>°C"]
+                    , Run Date "%a  %b %d %Y - %H:%M " "date" 50
                         -- Prints out the left side items such as workspaces, layout, etc.
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% }{ <box type=Bottom width=2 mb=2 color=#f1fa8c><fc=#f1fa8c><action=`alacritty -e htop`>%multicpu% (%multicoretemp%)</action></fc></box>    <box type=Bottom width=2 mb=2 color=#ff5555><fc=#ff5555><action=`alacritty -e htop`>%memory%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#8be9fd><fc=#8be9fd>%dynnetwork%</fc></box>    <box type=Bottom width=2 mb=2 color=#5af78e><fc=#5af78e>%disku%</fc></box>    <box type=Bottom width=2 mb=2 color=#ff79c6><fc=#ff79c6>%uptime%</fc></box>    <box type=Bottom width=2 mb=2 color=#ff6e67><fc=#ff6e67>battery</fc></box>    <box type=Bottom width=2 mb=2 color=#bd93f9><fc=#bd93f9>%KNYC%</fc></box>    <box type=Bottom width=2 mb=2 color=#caa9fa><fc=#caa9fa>%date%</fc></box>    "
+       , template = " %StdinReader% }{ <box type=Bottom width=2 mb=2 color=#bd93f9><fc=#bd93f9>penguin</fc></box> <box type=Bottom width=2 mb=2 color=#f1fa8c><fc=#f1fa8c><action=`alacritty -e htop`>%cpu%</action></fc></box> <box type=Bottom width=2 mb=2 color=#ff5555><fc=#ff5555><action=`alacritty -e htop`>%memory%</action></fc></box> <box type=Bottom width=2 mb=2 color=#5af78e><fc=#5af78e>%disku%</fc></box> <box type=Bottom width=2 mb=2 color=#ff79c6><fc=#ff79c6>%uptime%</fc></box> <box type=Bottom width=2 mb=2 color=#8be9fd><fc=#8be9fd><action=`alacritty -e sudo pacman -Syu`>pacupdate</action></fc></box> <box type=Bottom width=2 mb=2 color=#ff6e67><fc=#ff6e67>battery</fc></box> <box type=Bottom width=2 mb=2 color=#caa9fa><fc=#caa9fa>%date%</fc></box>"
        }
