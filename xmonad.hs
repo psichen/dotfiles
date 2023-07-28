@@ -31,7 +31,8 @@ myBar = "xmobar"
 
 ------------------------------------------------------------------------
 -- Workspaces
-myWorkspaces = ["1:main","2:wall","3:misc"] ++ map show [4..9]
+--myWorkspaces = ["1:main","2:wall","3:misc"] ++ map show [4..9]
+myWorkspaces = ["壹","贰","叁","肆","伍","陆","柒","捌","玖"]
 
 ------------------------------------------------------------------------
 -- Window rules
@@ -60,14 +61,13 @@ xmobarCurrentWorkspaceColor = "#CEFFAC"
 -- Width of the window border in pixels.
 myBorderWidth = 3
 
-
 ------------------------------------------------------------------------
 -- StatusBar
 myXmobarPP :: PP
 myXmobarPP = def
     { ppSep             = magenta " • "
     , ppTitleSanitize   = xmobarStrip
-    , ppCurrent         = wrap " " "" . xmobarBorder "Top" "#8be9fd" 2
+    , ppCurrent         = wrap " " "" . xmobarBorder "Bottom" "#8be9fd" 2
     , ppHidden          = white . wrap " " ""
     , ppUrgent          = red . wrap (yellow "!") (yellow "!")
     , ppOrder           = \[ws, l, _, wins] -> [ws, l, wins]
@@ -99,6 +99,7 @@ main = xmonad . ewmhFullscreen . ewmh =<< statusBar myBar myXmobarPP toggleStrut
 
 myConfig = def
     { modMask    = myModMask
+    , workspaces = myWorkspaces
     , layoutHook = spacing 3 $ smartBorders $ myLayout
     , manageHook = myManageHook
     }

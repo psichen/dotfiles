@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
+Plug 'doums/darcula'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'easymotion/vim-easymotion'
 Plug 'mg979/vim-visual-multi'
@@ -8,7 +8,6 @@ Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'luochen1990/rainbow'
-"Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'godlygeek/tabular'
 Plug 'SirVer/ultisnips'
@@ -30,7 +29,7 @@ call plug#end()
 " :PlugClean
 
 " User custom
-colorscheme gruvbox
+colorscheme darcula
 set termguicolors
 let mapleader = " "
 set nu rnu
@@ -100,7 +99,7 @@ nmap <Leader>p :InstantMarkdownPreview<CR>
 " lightline
 set laststatus=2
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'darculaOriginal',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'readonly', 'filename', 'modified', 'method' ] ]
@@ -152,7 +151,3 @@ syntax enable
 let g:vimtex_view_method='sioyek'
 let g:vimtex_quickfix_mode=0
 "let g:vimtex_indent_enabled=0
-
-" LeaderF
-let g:Lf_WindowPosition='popup'
-let g:Lf_PreviewInPopup=1
