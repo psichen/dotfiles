@@ -82,7 +82,8 @@ ln -s ~/Documents/Github/dotfiles/kmonad.kbd ~/.config/kmonad/kmonad.kbd
 sudo groupadd uinput
 sudo usermod -aG input $USER
 sudo usermod -aG uinput $USER
-echo 'KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"' > /etc/udev/rules.d/50-kmonad.rules
+sudo touch /etc/udev/rules.d/50-kmonad.rules
+echo 'KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"' | sudo tee /etc/udev/rules.d/50-kmonad.rules
 
 # xinit
 if [ -f ~/.xinitrc ]; then
