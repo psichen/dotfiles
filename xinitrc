@@ -58,7 +58,11 @@ then
         if [ -e ~/Pictures/Wallpapers/* ]
         then
                 feh --bg-fill --randomize ~/Pictures/Wallpapers/*
+        else
+                feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
         fi
+else
+        feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
 fi
 kmonad ~/.config/kmonad/kmonad.kbd
 exec xmonad
