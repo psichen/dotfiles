@@ -100,11 +100,12 @@ main = xmonad . ewmhFullscreen . ewmh =<< statusBar myBar myXmobarPP toggleStrut
 myConfig = def
     { modMask    = myModMask
     , workspaces = myWorkspaces
-    , layoutHook = spacing 3 $ smartBorders $ myLayout
+    , layoutHook = smartSpacing 3 $ smartBorders $ myLayout
     , manageHook = myManageHook
     }
   `additionalKeysP`
     [ ("M-f", spawn "firefox")
     , ("M-a", spawn myTerminal)
     , ("M-p", spawn myLauncher)
+    , ("M-w", spawn "feh --bg-fill --randomize $HOME/Pictures/Wallpapers/*")
     ]
