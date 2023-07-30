@@ -8,7 +8,7 @@ sudo pacman -Syu
 sudo pacman -S --noconfirm --needed base-devel zsh zsh-syntax-highlighting noto-fonts noto-fonts-cjk alacritty python python-pynvim python-pip htop feh nodejs npm neofetch neovim openssh
 
 # GUI tools
-sudo pacman -S --noconfirm --needed nvidia xorg-xinit xmonad xmonad-contrib xmobar firefox rofi
+sudo pacman -S --noconfirm --needed nvidia cuda xorg-xinit xmonad xmonad-contrib xmobar firefox rofi
 
 # Aur helper
 cd ~/ && git clone https://aur.archlinux.org/aura-bin.git && cd aura-bin
