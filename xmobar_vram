@@ -1,0 +1,3 @@
+#!/bin/bash
+mem=$(nvidia-smi --query-gpu=utilization.memory --format=csv,noheader)
+echo "$mem"
