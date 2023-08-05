@@ -64,5 +64,5 @@ then
 else
         feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
 fi
-#kmonad ~/.config/kmonad/kmonad.kbd &
+kmonad ~/.config/kmonad/kmonad.kbd &
 exec xmonad
