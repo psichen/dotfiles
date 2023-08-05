@@ -38,6 +38,7 @@ myWorkspaces = ["壹","贰","叁","肆","伍","陆","柒","捌","玖"]
 -- Window rules
 myManageHook = composeAll
     [ isDialog --> doFloat
+    , className =? "matplotlib" --> doFloat
     ]
 
 ------------------------------------------------------------------------
