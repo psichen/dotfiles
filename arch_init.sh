@@ -5,7 +5,7 @@
 sudo pacman -Syu
 
 # CLI tools
-sudo pacman -S --noconfirm --needed base-devel zsh zsh-syntax-highlighting noto-fonts noto-fonts-cjk alacritty python python-pynvim python-pip htop nvtop feh nodejs npm neofetch neovim openssh pandoc-cli
+sudo pacman -S --noconfirm --needed base-devel zsh zsh-syntax-highlighting noto-fonts noto-fonts-cjk alacritty python python-pynvim python-pip htop nvtop feh nodejs npm neofetch neovim openssh pandoc-cli ranger
 
 # GUI tools
 sudo pacman -S --noconfirm --needed nvidia cuda xorg-xinit xmonad xmonad-contrib xmobar firefox rofi qt6-base
@@ -87,6 +87,21 @@ sudo usermod -aG input $USER
 sudo usermod -aG uinput $USER
 sudo touch /etc/udev/rules.d/50-kmonad.rules
 echo 'KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"' | sudo tee /etc/udev/rules.d/50-kmonad.rules
+sudo touch /etc/modules-load.d/uinput.conf
+echo "uinput" | sudo tee /etc/modules-load.d/uinput.conf
+
+ # ranger
+ ranger --copy-config=rifle
+ echo 'ext pdf, has sioyek, X, flag f = sioyek "$@"' > $HOME/.config/ranger/rifle.conf
+
+ # sioyek
+if [ -d $HOME/.config/sioyek ]; then
+        mkdir -p $HOME/.old/sioyek && mv $HOME/.config/sioyek/* $HOME/.old/sioyek/
+else
+        mkdir -p $HOME/.config/sioyek
+fi
+ln -s $HOME/Documents/Github/dotfiles/keys_user.config $HOME/.config/sioyek/keys_user.config
+ln -s $HOME/Documents/Github/dotfiles/prefs_user.config $HOME/.config/sioyek/prefs_user.config
 
 # xinit
 if [ -f $HOME/.xinitrc ]; then
