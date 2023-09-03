@@ -59,7 +59,7 @@ then
         then
                 feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
         else
-                feh --bg-fill --randomize ~/Pictures/Wallpapers/*
+                feh --bg-max --randomize ~/Pictures/Wallpapers/*
         fi
 else
         feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
