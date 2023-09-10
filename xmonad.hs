@@ -109,4 +109,5 @@ myConfig = def
     , ("M-a", spawn myTerminal)
     , ("M-p", spawn myLauncher)
     , ("M-w", spawn "feh --bg-max --randomize $HOME/Pictures/Wallpapers/*")
+    , ("M-l", spawn "systemctl suspend")
     ]
