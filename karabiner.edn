@@ -15,7 +15,6 @@
                                                     [:a :left_arrow]
                                                     [:s :down_arrow]
                                                     [:d :right_arrow]]}
-        {:des "cmd+v to paste with formatting" :rules [[:!Qv :!COSv]]}
         {:des "launch by right_cmd+letter" :rules [
                                                    [:!Qe "open ~"]
                                                    [:!Qa "open '/Applications/Alacritty.app'"]
@@ -42,3 +41,4 @@
                                [:#Sslash :backslash]
                                ]}
         ]}
+        {:des "ctrl+c,v,w to cmd+c,v,w" :rules [[:!Tc :!Cc] [:!Tv :!Cv] [:!Tw :!Cw]]}

@@ -53,12 +53,6 @@ fi
 ln -sf $HOME/Documents/Github/dotfiles/markdown.snippets $HOME/.config/coc/ultisnips/markdown.snippets
 ln -sf $HOME/Documents/Github/dotfiles/python.snippets $HOME/.config/coc/ultisnips/python.snippets
 
-# oh-my-zsh
-if [ -f $HOME/.zshrc ]; then
-        mv $HOME/.zshrc $HOME/.old/.zshrc
-fi
-ln -s $HOME/Documents/Github/dotfiles/zshrc_arch $HOME/.zshrc
-
 # xmonad
 if [ -d $HOME/.config/xmonad ]; then
         mkdir -p $HOME/.old/xmonad && mv $HOME/.config/xmonad/* $HOME/.old/xmonad/
@@ -123,3 +117,9 @@ python -m venv $HOME/Documents/dev # python virtual environment
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # oh-my-zsh
 sudo systemctl enable sshd
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# oh-my-zsh
+if [ -f $HOME/.zshrc ]; then
+        mv $HOME/.zshrc $HOME/.old/.zshrc
+fi
+ln -s $HOME/Documents/Github/dotfiles/zshrc_arch $HOME/.zshrc
+

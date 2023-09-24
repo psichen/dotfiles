@@ -53,16 +53,6 @@ fi
 # xterm -geometry 80x50+494+51 &
 # xterm -geometry 80x20+494-0 &
 # exec xterm -geometry 80x66+0+0 -name login
-if [ -d ~/Pictures/Wallpapers ]
-then
-        if [ -z "$(ls -A ~/Pictures/Wallpapers/)" ]
-        then
-                feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
-        else
-                feh --bg-max --randomize ~/Pictures/Wallpapers/*
-        fi
-else
-        feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
-fi
+feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
 kmonad ~/.config/kmonad/kmonad.kbd &
 exec xmonad
