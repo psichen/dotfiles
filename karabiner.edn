@@ -40,5 +40,7 @@
                                             [:##left_control :##left_command [:!alacritty]]
                                             [:##left_command :##left_control [:!alacritty]]
                                             [:!Ttab :!Ctab [:!alacritty]]
+                                            [:!Ctab :!Ttab [:!alacritty]]
+                                            [:!Cspacebar :!Tspacebar]
                                             ]}
         ]}
