@@ -40,5 +40,5 @@
                                [:#Squote :equal_sign]
                                [:#Sslash :backslash]
                                ]}
-        ]}
         {:des "ctrl+c,v,w to cmd+c,v,w" :rules [[:!Tc :!Cc] [:!Tv :!Cv] [:!Tw :!Cw]]}
+        ]}
