@@ -1,11 +1,13 @@
 #!/bin/bash
 
 # ====================
-# Installation
+# Installation oh-my-zsh first
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # oh-my-zsh
+# ====================
 sudo pacman -Syu
 
 # CLI tools
-sudo pacman -S --noconfirm --needed base-devel zsh zsh-syntax-highlighting noto-fonts noto-fonts-cjk alacritty python python-pynvim python-pip htop nvtop feh nodejs npm neofetch neovim openssh pandoc-cli ranger reflector
+sudo pacman -S --noconfirm --needed base-devel zsh noto-fonts noto-fonts-cjk alacritty python python-pynvim python-pip htop nvtop feh nodejs npm neofetch neovim openssh pandoc-cli ranger reflector
 
 # GUI tools
 sudo pacman -S --noconfirm --needed nvidia cuda xorg-xinit xmonad xmonad-contrib xmobar firefox rofi qt6-base
@@ -114,7 +116,6 @@ ln -s $HOME/Documents/Github/dotfiles/zprofile $HOME/.zprofile
 fc-cache -f # refresh fonts
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' # vim-plug
 python -m venv $HOME/Documents/dev # python virtual environment
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # oh-my-zsh
 sudo systemctl enable sshd
 sudo reflector --latest 3 --sort rate --save /etc/pacman.d/mirrorlist
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -123,4 +124,3 @@ if [ -f $HOME/.zshrc ]; then
         mv $HOME/.zshrc $HOME/.old/.zshrc
 fi
 ln -s $HOME/Documents/Github/dotfiles/zshrc_arch $HOME/.zshrc
-
