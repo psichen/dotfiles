@@ -54,5 +54,4 @@ fi
 # xterm -geometry 80x20+494-0 &
 # exec xterm -geometry 80x66+0+0 -name login
 feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
-kmonad ~/.config/kmonad/kmonad.kbd &
 exec xmonad
