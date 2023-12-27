@@ -126,11 +126,11 @@ nmap <Leader>a, :Tabularize /,<CR>
 vmap <Leader>a, :Tabularize /,<CR>
 
 " UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsExpandTrigger="<c-y>"
+"let g:UltiSnipsJumpForwardTrigger="<c-n>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME."/Documents/Github/psichen.github.io/.scripts"]
+"let g:UltiSnipsSnippetDirectories=["UltiSnips", $HOME."/Documents/Github/psichen.github.io/.scripts"]
 
 " vim-surround
 nmap <Leader>" yst)"
