@@ -1,0 +1,13 @@
+[cursor]
+style = "Beam"
+
+[font]
+size = 14.0
+
+[[keyboard.bindings]]
+action = "None"
+key = "W"
+mods = "Command"
+
+[window]
+opacity = 0.9

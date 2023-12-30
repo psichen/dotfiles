@@ -40,7 +40,7 @@ if [ -d $HOME/.config/alacritty ]; then
 else
         mkdir -p $HOME/.config/alacritty
 fi
-ln -s $HOME/Documents/Github/dotfiles/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+ln -s $HOME/Documents/Github/dotfiles/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 
 # neovim
 if [ -d $HOME/.config/nvim ]; then
