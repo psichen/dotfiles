@@ -36,11 +36,4 @@
                                [:#Squote :equal_sign]
                                [:#Sslash :backslash]
                                ]}
-        {:des "switch cmd and ctrl" :rules [
-                                            [:##left_control :##left_command [:!alacritty]]
-                                            [:##left_command :##left_control [:!alacritty]]
-                                            [:!Ttab :!Ctab]
-                                            [:!Cspacebar :!Tspacebar]
-                                            [:!Tescape :!Cgrave_accent_and_tilde]
-                                            ]}
         ]}
