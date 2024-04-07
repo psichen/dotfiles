@@ -20,6 +20,11 @@ snippet pds "import pandas" b
 import pandas as pd
 endsnippet
 
+snippet cwd "set cwd" b
+import os
+cwd = os.path.dirname(os.path.realpath(__file__))
+endsnippet
+
 snippet imshow "plt.imshow()" b
 plt.imshow($0, interpolation=None, cmap='gray')
 plt.show()
