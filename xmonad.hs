@@ -43,7 +43,7 @@ myManageHook = composeAll
 
 ------------------------------------------------------------------------
 -- Layouts
-myLayout = avoidStruts $ tiled ||| threeCol ||| spiral (6/7) ||| Full
+myLayout = avoidStruts $ tiled ||| Mirror (tiled) ||| threeCol ||| spiral (6/7) ||| Full
   where
     threeCol = magnifiercz' 1.3 $ ThreeColMid nmaster delta ratio
     tiled    = Tall nmaster delta ratio
