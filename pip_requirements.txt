@@ -1,0 +1,10 @@
+pynvim
+numpy
+matplotlib
+scipy
+pandas
+control
+lmfit
+scipy
+scikit-image
+napari[all]
