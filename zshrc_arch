@@ -106,3 +106,4 @@ alias vim="nvim"
 alias dev="source ~/Documents/dev/bin/activate"
 alias base="deactivate"
 export PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
+export PATH=$PATH:/opt/ucsf-chimera/bin/
