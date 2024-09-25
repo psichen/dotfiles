@@ -13,11 +13,11 @@ Plug 'godlygeek/tabular'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-"Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'vim-pandoc/vim-pandoc'
-:Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'lervag/vimtex'
 Plug 'kmonad/kmonad-vim'
 
@@ -85,16 +85,16 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowLineNumbers = 1
 
 "" markdown-preview.nvim
-"let g:mkdp_refresh_slow=1
-"let g:mkdp_command_global=0
-"nmap <Leader>p <Plug>MarkdownPreview
+let g:mkdp_refresh_slow=1
+let g:mkdp_command_global=0
+nmap <Leader>p <Plug>MarkdownPreview
 
 " vim-instant-markdown
 let g:instant_markdown_autostart = 0
 let g:instant_markdown_mathjax = 1
 let g:instant_markdown_mermaid = 1
 let g:instant_markdown_autoscroll = 0
-nmap <Leader>p :InstantMarkdownPreview<CR>
+nmap <Leader><Leader>p :InstantMarkdownPreview<CR>
 
 " lightline
 set laststatus=2
