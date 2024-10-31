@@ -20,6 +20,8 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'lervag/vimtex'
 Plug 'kmonad/kmonad-vim'
+Plug 'liuchengxu/vista.vim'
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 call plug#end()
 
@@ -151,3 +153,9 @@ syntax enable
 let g:vimtex_view_method='sioyek'
 let g:vimtex_quickfix_mode=0
 "let g:vimtex_indent_enabled=0
+
+" Vista
+let g:vista_icon_indent = ["> ", ""]
+let g:vista_default_executive = 'coc'
+let g:vista#renderer#enable_icon = 0
+nmap <Leader>v :Vista!!<CR>
