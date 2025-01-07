@@ -56,3 +56,4 @@ fi
 feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
 # run 'xmonad --recompile' in case xmonad cannot start in X after Arch upgrade
 exec xmonad
+xrandr --output HDMI-1 --primary --auto --output VGA-1 --auto --left-of HDMI-1
