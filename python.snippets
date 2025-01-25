@@ -9,7 +9,8 @@ spt.interactive_fit($0)
 endsnippet
 
 snippet mpl "import matplotlib" b
-from matplotlib import pyplot as plt$0
+from matplotlib import pyplot as plt
+plt.rcParams['axes.prop_cycle'] = plt.cycler(color=plt.cm.Set2.colors)$0
 endsnippet
 
 snippet nmp "import numpy" b
