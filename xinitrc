@@ -55,4 +55,5 @@ fi
 #exec xterm -geometry 80x66+0+0 -name login
 feh --bg-fill ~/Documents/Github/dotfiles/haskell.png
 # run 'xmonad --recompile' in case xmonad cannot start in X after Arch upgrade
+xrandr --output HDMI-1 --primary --auto --output VGA-1 --auto --left-of HDMI-1
 exec xmonad
