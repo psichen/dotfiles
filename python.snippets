@@ -39,6 +39,10 @@ snippet plt "plt.show()" b
 plt.show()$0
 endsnippet
 
+snippet imsave "save image as tif" b
+io.imsave($0.astype(np.float32), check_contrast=False)
+endsnippet
+
 snippet napari "napari snippet" b
 import napari
 viewer = napari.Viewer()

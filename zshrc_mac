@@ -110,5 +110,4 @@ alias base="deactivate"
 alias ppfd="pfd | tr -d '\n' | pbcopy"
 alias ppfs="pfs | tr -d '\n' | pbcopy"
 alias hsafm="python ~/Documents/Github/hsafm-viewer/src/interface.py"
-alias rsync="rsync -avz --progress"
 source ~/Documents/dev/bin/activate
