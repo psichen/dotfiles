@@ -17,6 +17,7 @@
                                                    [:!Qf "open '/Applications/Firefox.app'"]
                                                    [:!Qg "open '/Applications/Google Chrome.app'"]
                                                    [:!Qi "open '/Applications/ImageJ.app'"]
+                                                   [:!Qc "open '/Applications/Visual Studio Code.app'"]
                                                    ]}
         {:des "numpad" :rules [
                                :numpad-mode
