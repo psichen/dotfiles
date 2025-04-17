@@ -11,6 +11,8 @@ endsnippet
 snippet mpl "import matplotlib" b
 from matplotlib import pyplot as plt
 plt.rcParams['axes.prop_cycle'] = plt.cycler(color=plt.cm.Set2.colors)$0
+import matplotlib
+matplotlib.rcParams['pdf.fonttype']=42
 endsnippet
 
 snippet nmp "import numpy" b
@@ -32,7 +34,7 @@ plt.show()
 endsnippet
 
 snippet sfig "plt.savefig()" b
-plt.savefig($0, transparent=True)
+plt.savefig($0, transparent=True, bbox_inches='tight')
 endsnippet
 
 snippet plt "plt.show()" b
