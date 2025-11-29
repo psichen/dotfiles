@@ -105,11 +105,30 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/opt/homebrew/bin:$PATH
 alias vim="nvim"
 alias pip="python3 -m pip"
-alias dev="source ~/Documents/dev/bin/activate"
-alias base="deactivate"
+alias dev="conda activate dev"
+alias base="conda deactivate"
 alias ppfd="pfd | tr -d '\n' | pbcopy"
 alias ppfs="pfs | tr -d '\n' | pbcopy"
 alias hsafm="python ~/Documents/Github/hsafm-viewer/src/interface.py"
 alias rd="python ~/Documents/Github/hsafm-viewer/src/scanParams.py"
 alias rsync="rsync -avz --progress"
-source ~/Documents/dev/bin/activate
+#source ~/Documents/dev/bin/activate
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+conda activate dev
+
+# Added by Antigravity
+export PATH="/Users/psichen/.antigravity/antigravity/bin:$PATH"
