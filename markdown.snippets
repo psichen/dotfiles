@@ -35,7 +35,6 @@ snippet ali "Align" bA
 \end{align*}
 endsnippet
 
-
 context "math()"
 snippet // "Fraction" iA
 \\frac{$1}{$2}$0
@@ -467,6 +466,10 @@ endsnippet
 
 snippet "(\w+),(\w+)\s(\d{4})\s\((.*)\)\s(.*)$" "reference" br
 `!p snip.rv = f'{match.group(1)}_{match.group(3)}["{match.group(2)} ({match.group(3)}) {match.group(4)} \\n {match.group(5)}"]'`$0
+endsnippet
+
+snippet \dd "upright d" iA
+\,\mathrm{d}
 endsnippet
 
 # vim:ft=snippets:
